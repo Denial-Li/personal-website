@@ -7,10 +7,25 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #fdfdfd;
     color: #333;
     line-height: 1.6;
+    background: linear-gradient(270deg, #7579ca, #e1e4f9, #bfc6ff);
+    background-size: 400% 400%;
+    animation: gradient 16s ease infinite;
 }
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 
 /* navigation bar */
 nav {
@@ -46,8 +61,8 @@ nav ul li a:hover {
 .headshot img {
     border-radius: 1rem;
     box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-    width: 300px;
-    height: auto;
+    width: auto;
+    height: 400px;
 }
 
 .name {
@@ -99,11 +114,13 @@ h2 {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    max-width: 900px;
+    width: auto;
     margin: auto;
 }
 
 .experience {
+    width: 80%;         
+    max-width: 1000px; 
     background: #faf9ff;
     border-left: 6px solid  #252b98;
     padding: 1.5rem;
@@ -121,10 +138,17 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
+.expBulletPoints {
+    text-indent: 30px;
+    margin-top: 10px;
+}
+
 footer {
     background-color: #252b98;
     color: white;
     text-align: center;
     padding: 1rem;
     margin-top: 3rem;
+    margin-bottom: 3rem;
 }
+
